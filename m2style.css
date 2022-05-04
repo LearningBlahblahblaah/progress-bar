@@ -1,0 +1,120 @@
+@import url('https://fonts.googleapis.com/css2?family=Muli&display=swap');
+
+/* =============GENERIC CSS====================== */
+
+:root {
+    font-family: "Muli", sans-serif;
+    box-sizing: border-box;
+    --blue: #34d2e0;
+    --blueLight: #acf2f8;
+    --blueDark: #008e9b;
+    --grey: #cacaca;
+}
+
+*, *::after, *::after {
+    box-sizing: inherit;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    overflow: hidden; 
+    gap: 50px;
+}
+
+
+/* ===============Progress bar==================== */
+
+.container {
+    text-align: center;
+}
+
+.progress-container {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    margin-bottom:30px;
+    max-width: 100%;
+    width: 350px;
+}
+
+.progress {
+    background-color: var(--blue);
+    position: absolute;
+    top: 50%;
+    left: 0;
+    height: 4px;
+    transform: translateY(-50%);
+    z-index: -1;
+    transition: 0.4s ease;
+
+    /* width: 50%; */
+    width: 0%;
+}
+
+/* for the grey line */
+.progress-container::before {
+    content: "";
+    background-color: var(--grey);
+    position: absolute;
+    top: 50%;
+    left: 0;
+    height: 4px;
+    transform: translateY(-50%);
+    z-index: -1;
+    transition: 0.4s ease;
+
+    width: 100%;
+}
+
+/* ===============Circle==================== */
+
+.circle {
+    background-color: white;
+    color: grey;
+    border-radius: 50%;
+    height: 30px;
+    width: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 3px solid var(--grey);
+    transition: .4s ease;
+}
+
+.circle.active {
+    border-color: var(--blue);
+}
+
+.btn {
+    background-color: var(--blue);
+    color: white;
+    border: 0;
+    border-radius: 6px;
+    cursor: pointer;
+    font-family: inherit;
+    padding: 8px 30px;
+    margin: 5px;
+    font-size: 14px;
+}
+
+/* scaling effect when button is active */
+.btn:active {
+    transform: scale(0.98);
+}
+
+.btn:focus {
+    outline: 0;
+}
+
+.btn:disabled {
+    background-color: var(--blueLight);
+    cursor: not-allowed;
+    transform: none;
+}
+

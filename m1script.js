@@ -41,7 +41,3 @@ buttonsList.forEach((button, buttonNum) => {
 
     })
 })
-
-function clearActiveClass(){
-    pointList.forEach(each => each.classList.remove(".active"));
-}

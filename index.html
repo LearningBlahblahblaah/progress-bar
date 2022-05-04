@@ -7,11 +7,13 @@
     <!-- For fontawesome: go to cdnjs -->
     <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" /> -->
     <!-- For CSS -->
-    <link rel="stylesheet" href="style.css">
+    <!-- <link rel="stylesheet" href="m1style.css"> -->
+    <link rel="stylesheet" href="m2style.css">
     <title>Progress Step</title>
 </head>
 <body>
-    <div class="progress">
+    <!-- ----------------M1: Using Pseudo + active classname-------------- -->
+    <!-- <div class="progress">
         <div class="progress_point">1</div>
         <div class="progress_point">2</div>
         <div class="progress_point">3</div>
@@ -20,7 +22,23 @@
     <div>
         <button disabled="true">Prev</button>
         <button>Next</button>
+    </div> 
+    <script src="m1script.js"></script>
+    -->
+    <!-- ----------------M2: Using CSS %-------------- -->
+    <div class="container">
+        <div class="progress-container">
+            <div class="progress" id="progress"></div>
+            <div class="circle active">1</div>
+            <div class="circle">2</div>
+            <div class="circle">3</div>
+            <div class="circle">4</div>
+        </div>
     </div>
-    <script src="script.js"></script>
+    <button class="btn" id="prev" disabled>Prev</button>
+    <button class="btn" id="next">Next</button>
+    <script src="m2script.js"></script>
+    <!-- ---------------------------------- -->
+
 </body>
 </html>
